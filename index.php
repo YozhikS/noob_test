@@ -81,22 +81,22 @@ echo power(2,64) . "<br>";
 echo "<hr> Задание 7 <br>";
 $hour = date('H');
 $min = date('i');
-$outStr = "час";
-if ((int($hour) > 1 && int($hour) < 5) || (int($hour) > 21 && int($hour) < 24)) {
+$outStr = " час";
+if (((int)$hour > 1 && (int)$hour < 5) || ((int)$hour > 21 && (int)$hour < 24)) {
    		$outStr = $outStr . "а";
-}elseif ((int($hour) == 0) || (int($hour) >= 5 && int($hour) < 21)) {
+}elseif ((int)$hour == 0 || ((int)$hour >= 5 && (int)$hour < 21)) {
    		$outStr = $outStr . "ов";
 }
-$outStr = $hour . $outStr . $min . "минут"
-if ((int($min) == 1 || ($min % 10) == 1) && int($min) != 11) {
+$outStr = $hour . $outStr . " " . $min . " минут";
+if (((int)$min == 1 || ($min % 10) == 1) && (int)$min != 11) {
    		$outStr = $outStr . "а";
 }elseif ((
-	(int($min) > 1 && int($min) < 5) || 
-	($min % 10) == 1) && (int($min) != 11 && )) {
+	((int)$min > 1 && (int)$min < 5) || 
+	(($min % 10) > 1) && (($min % 10) < 5 )) &&
+	((int)$min < 5 || (int)$min > 21)) {
    		$outStr = $outStr . "ы";
 }
-
-
+echo $outStr . "<br>";
 ?>
 <!DOCTYPE html>
 <html>
