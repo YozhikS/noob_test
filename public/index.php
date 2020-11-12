@@ -5,7 +5,7 @@ define('TPL_PATH', DOCROOT . 'templates/');
 
 require DOCROOT . '/engine/helpers/helper.php';
 
-$title = 'My app';
+$title = 'Заглушка не успеваю доделать задание';
 
 // $content = require(DOCROOT . '/config/database.php');
 
